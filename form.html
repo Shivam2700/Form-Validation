@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">d
+    <title>Feedback Form</title>
+    <script language ="javascript">
+        function demo()
+        {
+            var fid ,fnm,add,gen1,gen2,mn,ta1,select;
+
+            fid=document.getElementById("fid").value;
+            fnm=document.getElementById("fnm").value;
+            add=document.getElementById("add").value;
+            gen1=document.getElementById("gen1").value;
+            gen2=document.getElementById("gen2").value;
+            mn=document.getElementById("mn").value;
+            ta1=document.getElementById("ta1").value;
+
+            if(fid=="")
+            {
+                alert("Please enter your feedback id");
+                document.getElementById("fid").focus;
+                return false;
+            }
+            if(fnm=="")
+            {
+                alert("Please Enter Your Name..");
+                document.getElementById("fnm").focus;
+                return false;
+            }
+            if(!isNaN(fnm))
+            {
+                alert("Please Enter Characters only...");
+                document.getElementById("fnm").focous;
+                return false;
+            }
+            if(add=="")
+            {
+                alert("Please enter yout address");
+                document.getElementById("add").focous;
+                return false;
+            }
+            if(select=="")
+            {
+                alert("Please select city");
+                document.getElementById("select").focous;
+                return false;
+                
+            }
+            if(gen1=false && gen2==false)
+            {
+                alert("Please select your gender");
+                return false;
+            
+            }
+           
+        }
+    </script>
+</head>
+<body>
+    <form align="center" >
+        <h1><center>Feedback Form</center> </h1>
+        <table border = "2" align="center" cellspacing ="10">
+
+            <tr>
+                <td>Feedback Id </td>
+                <td><input type="text" id="fid" name="fid"></td>
+            </tr>
+
+            <tr>
+                <td>Name </td>
+                <td><input type="text" id="fnm" name="fnm"></td>
+            </tr>
+
+            <tr>
+                <td> Client Address </td>
+                <td><textarea name="add" id="add" ro"3" column="30"></textarea></td>
+            </tr>
+
+            <tr>
+                <td>City</td>
+                <td><Select name="City name"</td>
+                <option name ="select" id="select">Select</option>
+                <option>Kolhapur</option>
+                <option>Mumbai</option>
+                <option>Pune</option>
+                <option>Satara</option></select>
+            </tr>
+
+            <tr>
+                <td>Select Gender</td>
+                <td><input type="radio" id="gen1" name="gen1">Male
+                <input type="radio" id="gen2" name="gen2">Female
+                </td>
+             </tr>
+
+             <tr>
+                 <td>Mobile Number</td>
+                 <td><input type="text" id="mn" name="mn"></td>
+             </tr>
+
+             <tr>
+                 <td>Feedback</td>
+                 <td><textarea name="ta1" id="ta1" rows="3" columns="30"></textarea></td>
+             </tr>
+
+             <tr>
+                 <td>Send Report As</td>
+                 <td>
+                     <input type="checkbox" id="ch" name="ch" >Good
+                     <input type="checkbox" id="ch" name="ch">Better
+                     <input type="checkbox" id="ch" name="ch">Best
+                </td>
+             </tr>
+
+             <tr>
+                <td colspan="2" align="center"><input type="submit" id="submit" value="submit" onclick="return demo();">
+                    <input type="reset" id="rs1" name="rs1">
+                </td>
+             </tr>
+    </form>
+</body>
+</html> 
